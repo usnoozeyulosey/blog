@@ -55,7 +55,10 @@ nmcli con up "static-eth0"
 ## Switching Back to DHCP
 
 ```bash
-nmcli con mod "static-eth0" ipv4.method auto ipv4.addresses "" ipv4.gateway "" ipv4.dns ""
+nmcli con mod "static-eth0" ipv4.dns ""
+nmcli con mod "static-eth0" ipv4.gateway ""
+nmcli con mod "static-eth0" ipv4.method auto 
+nmcli con mod "static-eth0" ipv4.addresses ""
 nmcli con up "static-eth0"
 ```
 
